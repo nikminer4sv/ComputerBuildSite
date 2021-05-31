@@ -65,7 +65,7 @@ table {
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 body {
-  background: url(../../img/header/main-bg.jpg);
+  background: url(../img/header/main-bg.jpg);
   font-family: "Roboto", sans-serif;
   font-weight: 500;
 }
