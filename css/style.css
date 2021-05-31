@@ -78,6 +78,7 @@ body {
 .container {
   margin: 0 auto;
   max-width: 1300px;
+  padding: 0px 15px;
 }
 
 .header {
@@ -122,7 +123,7 @@ body {
   border: none;
   background: linear-gradient(94.26deg, #C89AFC 9.51%, #7C6AFA 90.23%);
   border-radius: 50px;
-  color: #eedada;
+  color: white;
   font-size: 16px;
   line-height: 24px;
   padding: 10px 30px;
@@ -131,7 +132,7 @@ body {
   width: 200px;
 }
 .nav__button:hover {
-  letter-spacing: 3px;
+  color: #eedada;
 }
 .nav__list {
   display: -webkit-box;
@@ -169,7 +170,6 @@ body {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   padding: 10% 0px;
-  margin-left: 15px;
 }
 .header .body__title {
   color: white;
@@ -221,11 +221,169 @@ body {
 }
 
 .under-header {
-  height: 130px;
   background-color: #121212;
+  color: white;
+}
+.under-header__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 130px;
+}
+.under-header__button {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  padding: 14px 30px;
+  background: linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%);
+  border-radius: 50px;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 700;
+}
+.under-header__finished {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 58px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.under-header__successful-text, .under-header__all-text {
+  margin-right: 30px;
+  opacity: 0.4;
+}
+.under-header__all {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.under-header__successful {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.rub {
+  font-family: "PT Sans", serif;
+}
+
+.progress {
+  height: 65px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.progress__earned {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+.progress__text {
+  margin-right: 30px;
+}
+.progress__number {
+  opacity: 0.4;
+}
+.progress progress {
+  width: 600px;
+  height: 6px;
+  background: white;
+}
+.progress progress::-webkit-progress-bar {
+  background: white;
+}
+.progress progress::-webkit-progress-value {
+  background: linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%);
+}
+.progress progress::-moz-progress-bar {
+  background: linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%);
+}
+.progress__numbers {
+  opacity: 0.4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 @media (max-width: 1280px) {
+  .under-header__body {
+    height: 120px;
+  }
+  .under-header__button {
+    padding: 12px 25px;
+    font-size: 14px;
+  }
+  .under-header__finished {
+    height: 50px;
+  }
+  .under-header__successful-text, .under-header__all-text {
+    margin-right: 20px;
+  }
+
+  .progress {
+    height: 50px;
+    font-size: 14px;
+  }
+  .progress__text {
+    margin-right: 20px;
+  }
+  .progress progress {
+    width: 520px;
+    height: 6px;
+    background: white;
+  }
+
   .header {
     background-size: cover;
   }
@@ -251,6 +409,36 @@ body {
   }
 }
 @media (max-width: 992px) {
+  .under-header__body {
+    height: 120px;
+  }
+  .under-header__button {
+    padding: 12px 25px;
+    font-size: 13px;
+  }
+  .under-header__finished {
+    height: 50px;
+  }
+  .under-header__finished {
+    height: 50px;
+    font-size: 14px;
+  }
+  .under-header__successful-text, .under-header__all-text {
+    margin-right: 20px;
+  }
+
+  .progress {
+    height: 50px;
+  }
+  .progress__text {
+    margin-right: 20px;
+  }
+  .progress progress {
+    width: 350px;
+    height: 6px;
+    background: white;
+  }
+
   .header .nav {
     padding-top: 36px;
   }
@@ -286,6 +474,38 @@ body {
   }
 }
 @media (max-width: 767px) {
+  .under-header__body {
+    height: 80px;
+  }
+  .under-header__button {
+    width: 60px;
+    padding: 8px 13px;
+    font-size: 8px;
+  }
+  .under-header__finished {
+    height: 50px;
+  }
+  .under-header__finished {
+    height: 30px;
+    font-size: 8px;
+  }
+  .under-header__successful-text, .under-header__all-text {
+    margin-right: 10px;
+  }
+
+  .progress {
+    height: 40px;
+    font-size: 12px;
+  }
+  .progress__text {
+    margin-right: 10px;
+  }
+  .progress progress {
+    width: 210px;
+    height: 6px;
+    background: white;
+  }
+
   .header .nav {
     padding-top: 18px;
     padding-left: 10px;
@@ -306,8 +526,8 @@ body {
     padding: 5px 12px;
     width: 110px;
   }
-  .header .body {
-    margin-left: 10px;
+  .header .container {
+    padding: 0px 10px;
   }
   .header .body__title {
     font-size: 36px;
@@ -326,6 +546,35 @@ body {
   }
 }
 @media (max-width: 480px) {
+  .under-header__body {
+    height: 60px;
+  }
+  .under-header__button {
+    width: 55px;
+    padding: 4px 6px;
+    font-size: 8px;
+  }
+  .under-header__finished {
+    height: 15px;
+    font-size: 6px;
+  }
+  .under-header__successful-text, .under-header__all-text {
+    margin-right: 1px;
+  }
+
+  .progress {
+    height: 25px;
+    font-size: 6px;
+  }
+  .progress__text {
+    margin-right: 5px;
+  }
+  .progress progress {
+    width: 120px;
+    height: 6px;
+    background: white;
+  }
+
   .header .nav {
     padding-top: 12px;
   }

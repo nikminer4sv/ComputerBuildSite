@@ -15,6 +15,7 @@ body {
 .container {
     margin: 0 auto;
     max-width: 1300px;
+    padding: 0px 15px;
 }
 
 .header {
@@ -46,7 +47,7 @@ body {
         border: none;
         background: linear-gradient(94.26deg, #C89AFC 9.51%, #7C6AFA 90.23%);
         border-radius: 50px;
-        color: rgb(238, 218, 218);
+        color: white;
         font-size: 16px;
         line-height: 24px;
         padding: 10px 30px;
@@ -54,7 +55,7 @@ body {
         width: 200px;
 
         &:hover {
-            letter-spacing: 3px;
+            color: rgb(238, 218, 218);
         }
 
     }
@@ -92,7 +93,6 @@ body {
         flex-direction: column;
         justify-content: space-around;
         padding: 10% 0px;
-        margin-left: 15px;
 
         &__title {
             color: white;
@@ -138,11 +138,145 @@ body {
 }
 
 .under-header {
-    height: 130px;
+
     background-color: #121212;
+    color: white;
+
+    &__body {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 130px;
+    }
+
+    &__button {
+        display: inline-block;
+        text-decoration: none;
+        color: white;
+        padding: 14px 30px;
+        background: linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%);
+        border-radius: 50px;
+        font-size: 16px;
+        text-align: center;
+        font-weight: 700;
+    }
+
+    &__finished {
+        display: flex;
+        flex-direction: column;
+        height: 58px;
+        justify-content: space-between;
+    }
+
+    &__successful-text, &__all-text {
+        margin-right: 30px;
+        opacity: 0.4;
+    }
+
+    &__all {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__successful {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+}
+
+.rub {
+    font-family: 'PT Sans', serif;
+}
+
+.progress {
+
+    height: 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__earned {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+    }
+
+    &__text {
+        margin-right: 30px;
+    }
+
+    &__number {
+        opacity: 0.4;
+    }
+
+    progress {
+        width: 600px;
+        height: 6px;
+        background: white;
+    }
+    progress::-webkit-progress-bar {
+        background: white;
+    }
+    progress::-webkit-progress-value {
+        background: linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%);
+    }
+    progress::-moz-progress-bar {
+        background: linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%);
+    }
+
+    &__numbers {
+        opacity: 0.4;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
 }
 
 @media (max-width: 1280px) {
+
+    .under-header {
+    
+        &__body {
+            height: 120px;
+        }
+    
+        &__button {
+            padding: 12px 25px;
+            font-size: 14px;
+        }
+    
+        &__finished {
+            height: 50px;
+        }
+    
+        &__successful-text, &__all-text {
+            margin-right: 20px;
+        }
+    
+    }
+
+    .progress {
+    
+        height: 50px;
+        font-size: 14px;
+    
+        &__text {
+            margin-right: 20px;
+        }
+    
+    
+        progress {
+            width: 520px;
+            height: 6px;
+            background: white;
+        }
+    
+    }
 
     .header {
         
@@ -185,6 +319,49 @@ body {
 }
 
 @media (max-width: 992px) {
+
+    .under-header {
+    
+        &__body {
+            height: 120px;
+        }
+    
+        &__button {
+            padding: 12px 25px;
+            font-size: 13px;
+        }
+    
+        &__finished {
+            height: 50px;
+        }
+    
+        &__finished {
+            height: 50px;
+            font-size: 14px;
+        }
+
+        &__successful-text, &__all-text {
+            margin-right: 20px;
+        }
+    
+    }
+    
+    .progress {
+    
+        height: 50px;
+    
+        &__text {
+            margin-right: 20px;
+        }
+    
+    
+        progress {
+            width: 350px;
+            height: 6px;
+            background: white;
+        }
+    
+    }
 
     .header {
 
@@ -246,6 +423,51 @@ body {
 
 @media (max-width: 767px) {
 
+    .under-header {
+
+        &__body {
+            height: 80px;
+        }
+    
+        &__button {
+            width: 60px;
+            padding: 8px 13px;
+            font-size: 8px;
+        }
+    
+        &__finished {
+            height: 50px;
+        }
+    
+        &__finished {
+            height: 30px;
+            font-size: 8px;
+        }
+
+        &__successful-text, &__all-text {
+            margin-right: 10px;
+        }
+
+    }
+    
+    .progress {
+    
+        height: 40px;
+        font-size: 12px;
+    
+        &__text {
+            margin-right: 10px;
+        }
+    
+    
+        progress {
+            width: 210px;
+            height: 6px;
+            background: white;
+        }
+    
+    }
+
     .header {
 
         .nav {
@@ -279,9 +501,11 @@ body {
 
         }
 
-        .body {
+        .container {
+            padding: 0px 10px;
+        }
 
-            margin-left: 10px;
+        .body {
 
             &__title {
                 font-size: 36px;
@@ -308,6 +532,47 @@ body {
 }
 
 @media (max-width: 480px) {
+
+    .under-header {
+
+        &__body {
+            height: 60px;
+        }
+    
+        &__button {
+            width: 55px;
+            padding: 4px 6px;
+            font-size: 8px;
+        }
+    
+        &__finished {
+            height: 15px;
+            font-size: 6px;
+        }
+
+        &__successful-text, &__all-text {
+            margin-right: 1px;
+        }
+
+    }
+    
+    .progress {
+    
+        height: 25px;
+        font-size: 6px;
+    
+        &__text {
+            margin-right: 5px;
+        }
+    
+    
+        progress {
+            width: 120px;
+            height: 6px;
+            background: white;
+        }
+    
+    }
 
     .header {
 
