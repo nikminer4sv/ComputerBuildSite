@@ -1,5 +1,5 @@
-@import "_reset.scss";
-@import "_fonts.scss";
+@import "_reset";
+@import "_fonts";
 
 body {
     background: url(../img/header/main-bg.jpg);
@@ -217,6 +217,7 @@ body {
         width: 600px;
         height: 6px;
         background: white;
+        border: none;
     }
     progress::-webkit-progress-bar {
         background: white;
@@ -237,398 +238,41 @@ body {
 
 }
 
-@media (max-width: 1280px) {
+.whatwedo {
 
-    .under-header {
-    
-        &__body {
-            height: 120px;
-        }
-    
-        &__button {
-            padding: 12px 25px;
-            font-size: 14px;
-        }
-    
-        &__finished {
-            height: 50px;
-        }
-    
-        &__successful-text, &__all-text {
-            margin-right: 20px;
-        }
-    
+    &__row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 942px;
     }
 
-    .progress {
-    
-        height: 50px;
-        font-size: 14px;
-    
-        &__text {
-            margin-right: 20px;
-        }
-    
-    
-        progress {
-            width: 520px;
-            height: 6px;
-            background: white;
-        }
-    
+    &__image img {
+        width: 526px;
     }
 
-    .header {
-        
-        background-size: cover;
+    &__body {
+        height: 270px;
+        padding-bottom: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 
-        .nav {
+    &__title {
+        font-size: 48px;
+        font-weight: 700;
+        color: white;
+    }
 
-            &__icon {
-                width: 25px;
-            }
-
-        }
-
-        .body {
-            
-            padding: 10% 0px;
-
-            &__title {
-                font-size: 48px;
-                margin-bottom: 32px;
-            }
-
-            &__number {
-                font-size: 28px;
-            }
-    
-            &__description {
-                font-size: 12px;
-            }
-    
-            &__block {
-                width: 65px;
-                height: 70px;
-            }
-
-        }
-
+    &__text {
+        width: 636px;
+        color: white;
+        font-size: 16px;
+        line-height: 160%;
     }
 
 }
 
-@media (max-width: 992px) {
-
-    .under-header {
-    
-        &__body {
-            height: 120px;
-        }
-    
-        &__button {
-            padding: 12px 25px;
-            font-size: 13px;
-        }
-    
-        &__finished {
-            height: 50px;
-        }
-    
-        &__finished {
-            height: 50px;
-            font-size: 14px;
-        }
-
-        &__successful-text, &__all-text {
-            margin-right: 20px;
-        }
-    
-    }
-    
-    .progress {
-    
-        height: 50px;
-    
-        &__text {
-            margin-right: 20px;
-        }
-    
-    
-        progress {
-            width: 350px;
-            height: 6px;
-            background: white;
-        }
-    
-    }
-
-    .header {
-
-        .nav {
-
-            padding-top: 36px;
-
-            &__icon {
-                width: 18px;
-            }
-
-            &__list {
-
-                li {
-                    margin-right: 10px;
-                }
-
-                a {
-                    font-size: 12px;
-                }
-
-            }
-
-            &__button {
-                font-size: 12px;
-                line-height: 24px;
-                padding: 8px 20px;
-                width: 150px;
-            }
-
-        }
-
-        .body {
-
-            &__title {
-                font-size: 42px;
-                margin-bottom: 28px;
-            }
-
-            &__number {
-                font-size: 22px;
-            }
-    
-            &__description {
-                font-size: 10px;
-            }
-    
-            &__block {
-                margin-right: 20px;
-                width: 52px;
-                height: 60px;
-            }
-
-        }
-
-    }
-
-}
-
-@media (max-width: 767px) {
-
-    .under-header {
-
-        &__body {
-            height: 80px;
-        }
-    
-        &__button {
-            width: 60px;
-            padding: 8px 13px;
-            font-size: 8px;
-        }
-    
-        &__finished {
-            height: 50px;
-        }
-    
-        &__finished {
-            height: 30px;
-            font-size: 8px;
-        }
-
-        &__successful-text, &__all-text {
-            margin-right: 10px;
-        }
-
-    }
-    
-    .progress {
-    
-        height: 40px;
-        font-size: 12px;
-    
-        &__text {
-            margin-right: 10px;
-        }
-    
-    
-        progress {
-            width: 210px;
-            height: 6px;
-            background: white;
-        }
-    
-    }
-
-    .header {
-
-        .nav {
-
-            padding-top: 18px;
-            padding-left: 10px;
-
-            &__icon {
-                width: 16px;
-            }
-
-            &__list {
-
-                li {
-                    margin-right: 5px;
-                    line-height: 16px;
-                }
-
-                a {
-                    font-size: 10px;
-                }
-
-            }
-
-            &__button {
-                font-size: 9px;
-                line-height: 16px;
-                padding: 5px 12px;
-                width: 110px;
-            }
-
-        }
-
-        .container {
-            padding: 0px 10px;
-        }
-
-        .body {
-
-            &__title {
-                font-size: 36px;
-                margin-bottom: 15px;
-            }
-
-            &__number {
-                font-size: 17px;
-            }
-    
-            &__description {
-                font-size: 8px;
-            }
-    
-            &__block {
-                width: 40px;
-                height: 50px;
-                margin-right: 10px;
-            }
-
-        }
-
-    }
-}
-
-@media (max-width: 480px) {
-
-    .under-header {
-
-        &__body {
-            height: 60px;
-        }
-    
-        &__button {
-            width: 55px;
-            padding: 4px 6px;
-            font-size: 8px;
-        }
-    
-        &__finished {
-            height: 15px;
-            font-size: 6px;
-        }
-
-        &__successful-text, &__all-text {
-            margin-right: 1px;
-        }
-
-    }
-    
-    .progress {
-    
-        height: 25px;
-        font-size: 6px;
-    
-        &__text {
-            margin-right: 5px;
-        }
-    
-    
-        progress {
-            width: 120px;
-            height: 6px;
-            background: white;
-        }
-    
-    }
-
-    .header {
-
-        .nav {
-
-            padding-top: 12px;
-
-            &__icon img {
-                margin-top: 5px;
-                width: 18px;
-            }
-
-            &__list {
-
-                li {
-                    margin-right: 4px;
-                }
-
-                a {
-                    font-size: 6px;
-                }
-
-            }
-
-            &__button {
-                margin-top: 2px;
-                font-size: 6px;
-                line-height: 12px;
-                padding: 3px 6px;
-                width: 80px;
-            }
-
-        }
-
-        .body {
-
-            &__title {
-                font-size: 16px;
-                margin-bottom: 5px;
-            }
-
-            &__number {
-                font-size: 10px;
-            }
-    
-            &__description {
-                font-size: 4px;
-            }
-    
-            &__block {
-                width: 22px;
-                height: 30px;
-                margin-right: 5px;
-            }
-
-        }
-
-    }
-}
+@import "_mediaqueries";
